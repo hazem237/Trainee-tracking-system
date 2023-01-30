@@ -34,8 +34,8 @@ model Trainee {
   username     String   @unique
   passwordHash String
   tasks        task[]
-  MentorId     String
-  Mentor       Mentor   @relation(fields: [MentorId], references: [id], onDelete: Cascade)
+  MentorId     String?
+  Mentor       Mentor?   @relation(fields: [MentorId], references: [id], onDelete: Cascade)
 }
 
 model Mentor {
