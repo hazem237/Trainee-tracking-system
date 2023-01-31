@@ -1,10 +1,18 @@
-import Login from "~/components/login";
+import { LinksFunction } from "@remix-run/node";
+import { Link } from "react-router-dom";
+import stylesUrl from "~/styles/global.css";
+
+export const links: LinksFunction = () => {
+  return [{ rel: "stylesheet", href: stylesUrl }];
+};
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
+    <div className="wapper">
       <h1>Welcome!</h1>
-      <Login/>
-      </div>
+      <Link to="./login" className="button">
+        Log In
+      </Link>
+    </div>
   );
 }

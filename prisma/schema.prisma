@@ -16,6 +16,7 @@ model Admin {
   updatedAt    DateTime @updatedAt
   username     String   @unique
   passwordHash String
+  role         String
 }
 model task {
   id        String   @id @default(uuid())
@@ -36,6 +37,7 @@ model Trainee {
   tasks        task[]
   MentorId     String?
   Mentor       Mentor?   @relation(fields: [MentorId], references: [id], onDelete: Cascade)
+  role         String
 }
 
 model Mentor {
@@ -45,4 +47,5 @@ model Mentor {
   username     String    @unique
   passwordHash String
   Trainee      Trainee[]
+  role         String
 }
