@@ -73,3 +73,7 @@ header {
     background-color:rgb(255, 170, 0);
     max-height: 500px;
   }
+  .form-header {
+    display: flex;
+    justify-content: space-between;
+  }
