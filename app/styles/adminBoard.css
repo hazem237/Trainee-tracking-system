@@ -1,0 +1,75 @@
+.admin-container {
+  width: 50%;
+  height: 32vw;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  column-gap: 50px;
+  row-gap: 50px;
+  margin-top: 40px;
+}
+
+.container-child {
+  color: #000000;
+  padding: 50px;
+  font-size: 30px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.title {
+  color: #000000;
+  font-family: "Pacifico", cursive;
+}
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+}
+.Hi {
+  width: 200px;
+  font-size: 1.3rem;
+}
+.add-container {
+    backdrop-filter: blur(4px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .add-form {
+    width: 30%;
+    height: max-content;
+    border-radius: 9px;
+    padding: 33px;
+    background-color:rgb(255, 170, 0);
+    max-height: 500px;
+  }

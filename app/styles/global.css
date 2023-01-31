@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pacifico&display=swap');
 
-:root {
+ :root {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-family: "Comfortaa", cursive;
@@ -67,7 +67,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  /* background-color: #eb6440; */
+} 
 
 a {
   color: var(--color-foreground);
@@ -87,14 +88,15 @@ hr {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-/* .wapper
+ /* .wapper
 {
     background-color: #eb6440;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding :17px
-} */
+    padding :40px ;
+    flex-direction: column; 
+}  */
 
 h1,
 h2,
@@ -142,19 +144,17 @@ h5 {
   white-space: nowrap;
   border-width: 0;
 }
-
+/* 
 .container {
   --gutter: 16px;
-  width: 1024px;
-  height: 400px;
+  width: 80%;
+  height: 70%;
   max-width: calc(100% - var(--gutter) * 2);
   margin-right: auto;
   margin-left: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+  background-color: red;
+
+} */
 .title-container {
   width: 40%;
   height: 30%;

@@ -1,3 +1,11 @@
 .wapper {
-    background-color: orange ;
+    /* background-color: rgb(89, 255, 0) ; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px;
+}
+.wapper >h1 {
+    margin-bottom: 20px;
 }

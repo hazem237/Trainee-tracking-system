@@ -6,11 +6,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pacifico&display=swap");
 body {
   background-image: var(--gradient-background);
-  color: #497174;
+  color: black;
 }
 
 .container {
   min-height: inherit;
+  width: 100%;
 }
 
 .container,
@@ -24,7 +25,7 @@ body {
 
 .content {
   padding: 1rem;
-  background-color: hsl(77, 90%, 44%);
+  background-color: white;
   border-radius: 5px;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
   width: 400px;

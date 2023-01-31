@@ -81,7 +81,7 @@ export async function requireUserId(
   }
   return userId;
 }
-export async function getUser(request: Request) {
+export async function getTrainee(request: Request) {
   const userId = await getUserId(request);
   if (typeof userId !== "string") {
     return null;
@@ -97,7 +97,38 @@ export async function getUser(request: Request) {
     throw logout(request);
   }
 }
+export async function getAdmin(request: Request) {
+  const userId = await getUserId(request);
+  if (typeof userId !== "string") {
+    return null;
+  }
 
+  try {
+    const user = await prisma.admin.findUnique({
+      where: { id: userId },
+      select: { id: true, username: true },
+    });
+    return user;
+  } catch {
+    throw logout(request);
+  }
+}
+export async function getMentor(request: Request) {
+  const userId = await getUserId(request);
+  if (typeof userId !== "string") {
+    return null;
+  }
+
+  try {
+    const user = await prisma.mentor.findUnique({
+      where: { id: userId },
+      select: { id: true, username: true },
+    });
+    return user;
+  } catch {
+    throw logout(request);
+  }
+}
 export async function logout(request: Request) {
   const session = await getUserSession(request);
   return redirect("/login", {
