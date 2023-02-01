@@ -11,3 +11,20 @@ export async function createMentor(data:{username:string , passwordHash:string ,
         }
     })
 }
+export async function getMentors() {
+    return prisma.mentor.findMany(
+        {
+            select:{
+                username:true,
+                id:true
+            }
+        }
+    )
+}
+export async function getMentorBasedName(MentorName:string) {
+    return prisma.mentor.findUnique(
+        {
+          where:{username:MentorName}
+        }
+    )
+}

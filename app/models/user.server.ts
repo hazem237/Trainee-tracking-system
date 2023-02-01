@@ -4,9 +4,17 @@ export type userType = Admin | Trainee | Mentor | null;
 
 const prisma = new PrismaClient();
 
-export async function createUser(user: object) {
+export async function createUser(user: {
+  username: string;
+  passwordHash: string;
+  role: string;
+}) {
   return prisma.trainee.create({
-    data: user,
+    data: {
+      username: user.username,
+      passwordHash: user.passwordHash,
+      role: user.role,
+    },
   });
 }
 export async function login(username: string, password: string) {

@@ -17,7 +17,7 @@ const newAdmin =()=>{
     return (
         <div className="add-container">
           <form method="post" className="add-form" style={{backgroundColor:"gray"}}>
-            <div className="form-header">
+            <div className="form-header" style={{color:"white"}}>
               {" "}
               <h2>New Admin Account</h2>
               <Link to={".."}>X</Link>

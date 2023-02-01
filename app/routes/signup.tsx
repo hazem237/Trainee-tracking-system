@@ -31,7 +31,7 @@ export const action: ActionFunction = async ({ request }: ActionArgs) => {
   if (Object.values(AnyMissingDataError).some((el) => el)) {
     return json<ActionData>(AnyMissingDataError);
   }
-  await createUser({ username: name, passwordHash: password });
+  await createUser({ username: name, passwordHash: password ,role:"trainee"});
   return redirect("..");
 };
 
