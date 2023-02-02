@@ -20,7 +20,7 @@ const adminBoard = () => {
   const arr = [1, 2, 3, 4];
   return (
     <div className="admin-container">
-      <Header username={AdminName} />
+      <Header username={AdminName} siteTitle="Admin" />
       <Link to={"newMentor"} className="container-child">
         Create Mentor Account
       </Link>

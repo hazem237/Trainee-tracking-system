@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+:root {
+  font-family: 'Montserrat', sans-serif;;
+}
+.task-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: inherit;
+  width: 100%;
+  color: #497174;
+  
+}
+header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid green;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 15;
+}
+.title {
+  color: #497174;
+  font-family: 'Pacifico', cursive;
+}
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+}
+.Hi {
+  width: 200px;
+  font-size: 1.3rem;
+}
+
+.tasks-main {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main-child {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 17px;
+  border-radius: 4px;
+  height: max-content;
+  min-height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+}
+.new {
+  background-color: #eff5f55a;
+  color: #497174;
+  margin-top: 10px;
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border-radius: 4px;
+}
+.new:hover {
+  background-color: #4971745d;
+}
+.single-task {
+  background-color: #d8d8d863;
+  color: #497174;
+  margin-top: 10px;
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.single-task:hover {
+  background-color: rgba(128, 128, 128, 0.204);
+}
+.btn-container {
+  background-color: red;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.Done-task {
+  background-color: rgba(117, 216, 117, 0.59);
+  color: #497174;
+  margin-top: 10px;
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.add-task-container {
+  backdrop-filter: blur(4px);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.single-task-container {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+
+  width: 40%;
+  bottom: 0;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: all 1s;
+  padding: 23px;
+  border-radius: 10px;
+}
+.single-task-container:hover {
+  width: 42%;
+}
+.single-task-container-header {
+  width: 100%;
+  padding: 19px;
+  font-size: 24px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+.add-task-form {
+  width: 30%;
+  height: max-content;
+  border-radius: 9px;
+  padding: 33px;
+  background-color: #eff5f5;
+  max-height: 500px;
+}
+.add-task-form > input {
+  border: 1px solid black;
+}
+.form-header {
+  display: flex;
+  justify-content: space-between;
+}
+.to-Do-container,
+.in-progress-container,
+.Done-container {
+  color: rgb(79, 79, 79);
+  width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.to-Do-container {
+  background-color: rgb(211, 139, 117);
+}
+.in-progress-container {
+  background-color: rgb(114, 190, 219);
+}
+.Done-container {
+  background-color: rgb(122, 198, 122);
+}
+.data-container {
+  height: 90%;
+  padding: 10px;
+}
+.data-container > h2 {
+  margin-bottom: 16px;
+  color: black;
+}
+.data-container > h5 {
+  margin-bottom: 16px;
+  color: rgb(145, 145, 145);
+}
+.single-task-form {
+  margin-top: 30px;
+}
+/* .single-task-form :first-child {
+  background-color: rgb(245, 132, 132);
+}
+.single-task-form :nth-child(2) {
+  background-color: rgba(128, 128, 128, 0.859);
+} */
+.content-ta
+{
+  height: 200px;
+  color: black;
+  border: none;
+  display: none;
+}
+
+@media print, (min-width: 640px) {
+  .jokes-header .logo {
+    display: none;
+  }
+
+  .jokes-header .logo-medium {
+    display: block;
+  }
+
+  .jokes-main {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .jokes-main .container {
+    flex-direction: column;
+  }
+}

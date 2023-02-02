@@ -15,6 +15,7 @@ export const action: ActionFunction = async ({ request }) => {
 const newMentor = () => {
   return (
     <div className="add-container">
+      <div className="form-container">
       <form method="post" className="add-form">
         <div className="form-header">
           {" "}
@@ -41,6 +42,7 @@ const newMentor = () => {
           Create Mentor Account
         </button>
       </form>
+      </div>
     </div>
   );
 };

@@ -16,6 +16,7 @@ export const action: ActionFunction = async ({ request }) => {
 const newAdmin =()=>{
     return (
         <div className="add-container">
+             <div className="form-container">
           <form method="post" className="add-form" style={{backgroundColor:"gray"}}>
             <div className="form-header" style={{color:"white"}}>
               {" "}
@@ -42,6 +43,7 @@ const newAdmin =()=>{
               Create Admin Account
             </button>
           </form>
+          </div>
         </div>
       );
 }

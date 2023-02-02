@@ -25,3 +25,9 @@ export async function setTraineeMentor(id: string, mentorId: string) {
     },
   });
 }
+
+export async function getTraineesBasedMentor(MentorId:string) {
+    return prisma.trainee.findMany({
+        where:{MentorId:MentorId}
+    })
+}

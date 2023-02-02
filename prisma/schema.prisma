@@ -25,6 +25,8 @@ model task {
   title     String
   content   String
   TraineeId    String
+   ColumnsId String
+  Columns   Columns  @relation(fields: [ColumnsId], references: [id], onDelete: Cascade)
   Trainee      Trainee     @relation(fields: [TraineeId], references: [id], onDelete: Cascade)
 }
 
@@ -48,4 +50,9 @@ model Mentor {
   passwordHash String
   Trainee      Trainee[]
   role         String
+}
+model Columns {
+  id    String @id @default(uuid())
+  title String
+  tasks task[]
 }

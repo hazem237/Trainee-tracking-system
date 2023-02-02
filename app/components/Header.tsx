@@ -1,13 +1,18 @@
 import { Link } from "@remix-run/react";
+
 type prop = {
   username: string | undefined;
+  siteTitle: string;
 };
-const Header = ({ username }: prop) => {
+const Header = ({ username, siteTitle }: prop) => {
   return (
     <header>
       <h2>
         <Link to="/tasks">
-          <span className="title"><span style={{color:'orange'}}>Admin</span>Swapy +</span>
+          <span className="title">
+            <span style={{ color: siteTitle=='Admin'?"orange":"green" }}>{siteTitle}</span>Swapy{" "}
+            {siteTitle == "Admin" ? "+" : null}
+          </span>
         </Link>
       </h2>
       <div className="welcome">
