@@ -31,3 +31,9 @@ export async function getTraineesBasedMentor(MentorId:string) {
         where:{MentorId:MentorId}
     })
 }
+
+export async function getTraineeBasedId(id:string) {
+  return prisma.trainee.findUnique({
+    where:{id:id}
+  })
+}

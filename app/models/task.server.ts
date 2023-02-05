@@ -3,16 +3,15 @@ import { getUserId } from "./user.server";
 
 const prisma = new PrismaClient();
 
-export async function getTasks(request:Request) {
+export async function getTasks(request: Request) {
   return prisma.task.findMany({
     where: { TraineeId: await getUserId(request) },
     orderBy: { createdAt: "desc" },
   });
 }
 
-
 export async function getColumns() {
-  return prisma.columns.findMany()
+  return prisma.columns.findMany();
 }
 
 export async function editTaskCoulmn(taskId: string, coulmnId: string) {
@@ -41,12 +40,12 @@ export async function getSingleTask(id: string) {
       title: true,
       content: true,
       ColumnsId: true,
-      createdAt:true,
-      updatedAt:true
+      createdAt: true,
+      updatedAt: true,
     },
   });
 }
-export async function getSingleColumn(id) {
+export async function getSingleColumn(id: string) {
   return prisma.columns.findUnique({
     where: { id: id },
   });
@@ -54,15 +53,21 @@ export async function getSingleColumn(id) {
 
 export async function deleteTask(id) {
   return prisma.task.delete({
-    where:{id:id}
-  })
+    where: { id: id },
+  });
 }
 
-export async function updateTask (id , data){
- return prisma.task.update({
-  where: {
-    id: id,
-  },
-  data: data
- })
+export async function updateTask(id, data) {
+  return prisma.task.update({
+    where: {
+      id: id,
+    },
+    data: data,
+  });
+}
+
+export async function getTasksBasedTraineeId(traineeId: string) {
+  return prisma.task.findMany({
+    where: { TraineeId: traineeId },
+  });
 }

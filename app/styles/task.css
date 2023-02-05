@@ -183,6 +183,10 @@ header {
 }
 .single-task-form {
   margin-top: 30px;
+  color: black;
+}
+.single-task-form > h5 {
+    color: rgba(128, 128, 128, 0.814);
 }
 /* .single-task-form :first-child {
   background-color: rgb(245, 132, 132);
