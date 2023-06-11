@@ -14,6 +14,7 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 import globalStylesUrl from "./styles/global.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 export const links: LinksFunction = () => {

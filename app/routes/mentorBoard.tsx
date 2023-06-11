@@ -12,6 +12,7 @@ import {
   getTrainee,
 } from "~/models/user.server";
 import stylesUrl from "~/styles/adminBoard.css";
+import  "../../public/images/pngwing.com.png" 
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
@@ -48,6 +49,7 @@ export const action: ActionFunction = async ({ request }) => {
 const adminBoard = () => {
   const { MentorName, ListOfTrainee, MentorTrainess } =
     useLoaderData() as LoaderData;
+
   return (
     <div className="admin-container">
       <Header username={MentorName} siteTitle="Mentor" />
@@ -77,7 +79,7 @@ const adminBoard = () => {
           <div className="mentor-image">
             <img
               src={
-                "https://png.pngtree.com/png-vector/20221203/ourmid/pngtree-cartoon-style-male-user-profile-icon-vector-illustraton-png-image_6489287.png"
+                "../../public/images/pngwing.com.png"
               }
             ></img>
           </div>

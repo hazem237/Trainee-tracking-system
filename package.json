@@ -9,6 +9,8 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@prisma/client": "^4.9.0",
     "@remix-run/node": "^1.11.1",
     "@remix-run/react": "^1.11.1",
@@ -18,9 +20,11 @@
     "prisma": "^4.9.0",
     "react": "^18.2.0",
     "react-beautiful-dnd": "^13.1.1",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
     "@remix-run/dev": "^1.11.1",
     "@remix-run/eslint-config": "^1.11.1",
     "@types/invariant": "^2.2.35",

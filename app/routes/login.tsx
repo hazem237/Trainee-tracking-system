@@ -9,6 +9,12 @@ import { useActionData } from "@remix-run/react";
 import { createUserSession, login, userType } from "~/models/user.server";
 import stylesUrl from "~/styles/login.css";
 
+
+
+
+
+
+
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesUrl },
 ];
@@ -52,7 +58,9 @@ export default function Login() {
     <div className="container">
       <h2>{message?.message}</h2>
       <div className="content" data-light="">
-        <h1 style={{ fontSize: 45, color: "#497174" }}>Login</h1>
+        <h1 style={{ fontSize: 45, color: "#497174" }}>Login 😀😒🔫✨</h1>
+
+
         <form method="post">
           <div>
             <label htmlFor="username-input">Username </label>

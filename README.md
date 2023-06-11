@@ -1,41 +1,22 @@
-# Welcome to Remix!
+# User Management System
 
-- [Remix Docs](https://remix.run/docs)
+This User Management System is built using [Prisma](https://www.prisma.io/), [TypeScript](https://www.typescriptlang.org/), and [Remix](https://remix.run/). The system focuses on three user types: Administrator, Mentor, and Trainee.
 
-## Fly Setup
+## Features
 
-1. [Install `flyctl`](https://fly.io/docs/getting-started/installing-flyctl/)
+- User authentication and authorization system with login and logout functionality
+- Three user types: Administrator, Mentor, and Trainee
+- Secure access to different system features based on user roles
+- Drag-and-drop functionality for managing a to-do list
+- Database integration using Prisma for efficient data handling
+- Server-side rendering and dynamic routing with Remix
+- Written in TypeScript for enhanced code readability and maintainability
 
-2. Sign up and log in to Fly
+## Prerequisites
 
-```sh
-flyctl auth signup
-```
+Before running the system, make sure you have the following installed:
 
-3. Setup Fly. It might ask if you want to deploy, say no since you haven't built the app yet.
+- Node.js 
+- npm 
 
-```sh
-flyctl launch
-```
 
-## Development
-
-From your terminal:
-
-```sh
-npm run dev
-```
-
-This starts your app in development mode, rebuilding assets on file changes.
-
-## Deployment
-
-If you've followed the setup instructions already, all you need to do is run this:
-
-```sh
-npm run deploy
-```
-
-You can run `flyctl info` to get the url and ip address of your server.
-
-Check out the [fly docs](https://fly.io/docs/getting-started/node/) for more information.
